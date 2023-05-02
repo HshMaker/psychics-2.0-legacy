@@ -13,6 +13,3 @@
 * [docs](https://monun.github.io/psychics/)
 
 ---
-## TODO
-
-* [ ] Show Firework without Tap Effect Util 
