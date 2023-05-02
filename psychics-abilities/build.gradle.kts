@@ -50,7 +50,7 @@ subprojects {
 
 gradle.buildFinished {
     val abilitiesDir = File(buildDir,"abilities")
-    abilitiesDir.mkdir()
+    mkdir(abilitiesDir)
 
     subprojects
         .map { File(it.buildDir, "libs") }
@@ -61,5 +61,6 @@ gradle.buildFinished {
             it.copyTo(newFile,true)
         }
 
-    zipTo(File(buildDir, "abilities.zip"), abilitiesDir)
+    if (abilitiesDir.exists())
+        zipTo(File(buildDir, "abilities.zip"), abilitiesDir)
 }

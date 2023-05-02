@@ -6,6 +6,7 @@ import io.github.monun.psychics.Channel
 import io.github.monun.psychics.attribute.EsperAttribute
 import io.github.monun.psychics.damage.Damage
 import io.github.monun.psychics.damage.DamageType
+import io.github.monun.psychics.effect.spawnFirework
 import io.github.monun.psychics.util.hostileFilter
 import io.github.monun.tap.config.Name
 //import io.github.monun.tap.effect.playFirework
@@ -37,7 +38,8 @@ class AbilitySample : ActiveAbility<AbilityConceptSample>(), Listener {
         private val effect = FireworkEffect.builder().with(FireworkEffect.Type.BURST).withColor(Color.RED).build()
 
         private fun LivingEntity.playPsychicEffect() {
-            //orld.playFirework(location, effect) //TODO: Show Firework without Tap Effect Util
+            //world.playFirework(location, effect) //TODO: Show Firework without Tap Effect Util
+            world.spawnFirework(location.apply { this.y += 0.5 }, effect)
         }
     }
 
