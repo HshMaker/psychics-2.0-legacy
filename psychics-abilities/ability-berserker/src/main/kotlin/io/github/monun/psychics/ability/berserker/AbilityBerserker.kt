@@ -5,7 +5,6 @@ import io.github.monun.psychics.ActiveAbility
 import io.github.monun.psychics.effect.spawnFirework
 import io.github.monun.tap.config.Config
 import io.github.monun.tap.config.Name
-//import io.github.monun.tap.effect.playFirework
 import org.bukkit.*
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
